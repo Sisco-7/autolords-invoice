@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autolords Workshop Invoice</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="invoice-container">
+        <header>
+        <h1>Autolords Workshop</h1>
+           <b><p style="color: rgb(255, 255, 255);">3 - 5, Gbala Street, Gbagada, Lagos.  | Phone:0708 518 7692</p></b>
+            
+        </header>
+
+        
+            <div>
+            <h3>Company Information</h3>
+            <li>Invoice Number:<input type="text>"></li>
+            <li>Invoice Date:<input type="text>"></li>
+            <li>Billing Information:<input type="text>"></li>  
+            <li>Address:<input type="text>"></li>
+            <li>Phone Number:<input type="text>"></li>
+            <li>Email Address:<input type="text>"></li>
+
+            </div>
+
+            <p></p>
+            <h3>Customer Information</h3>
+            <li>Customer Name:<input type="text>"></li>
+            <li>Customer Address:<input type="text>"></li>                
+            </form>
+            <p></p>
+        
+
+        <section class="vehicle information">
+            <h3>Vehicle Information</h3>
+            <li>Vehicle Make:<input type="text>"></li>
+            <li>Vehicle Model:<input type="text>"></li>
+            <li>Vehicle Year:<input type="text>"></li>
+        </section>
+        <p></p>
+
+        <section class="services">
+            <h3>Services Rendered</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Quantity</th>
+                        <th>Unit Price</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody id="service-list">
+                    <!-- Preloaded example descriptions -->
+                    <tr>
+                        <td>Oil Change - Synthetic</td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>Brake Pad Replacement</td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>Engine Diagnostics</td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="add-service-form">
+                <h4>Add Service</h4>
+                <input type="text" id="service-description" placeholder="Service Description" required>
+                <input type="number" id="service-quantity" placeholder="Quantity" min="1" required>
+                <input type="number" id="service-unit-price" placeholder="Unit Price" min="0.01" step="0.01" required>
+                <button type="button" id="add-service-btn">Add Service</button>
+            </div>
+        </section>
+
+        <section class="payment terms">
+            <h3>Payment Terms</h3>
+            <li>Payment Method: Cash<input type="radio" name="cash" id="cash" value="Cash"> Cheque<input type="radio" name="cheque" id="cheque" value="cheque">
+                Transfer<input type="radio" name="transfer" id="transfer" value="transfer">
+</li>
+            <li>Payment Due Date:<input type="text"></li> 
+            <li>Late Payment fee:<input type="text"></li>                
+        
+        </section>
+
+        <section class="total">
+            <h3>Total Amount</h3>
+            <p><strong>Total:<textarea></textarea></strong> <span id="invoice-total"></span></p>
+
+            <button>Submit</button>
+        </section>
+    
+        <footer>
+            <p><b><u>Thank you for using Autolords service!</u></b></p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
